@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+	<name>ordersToERPGBaquero</name>
+	<displayName><![CDATA[Orders to ERP Garcia Baquero]]></displayName>
+	<version><![CDATA[1.0.0]]></version>
+	<description><![CDATA[Envía los pedidos realizados en la tienda al ERP de Garcia Baquero]]></description>
+	<author><![CDATA[DELTAnet]]></author>
+	<tab><![CDATA[others]]></tab>
+	<is_configurable>1</is_configurable>
+	<need_instance>1</need_instance>
+</module>
