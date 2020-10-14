@@ -22,17 +22,9 @@ class PedidosController
             $opt['resource'] = 'orders';
             $opt['id'] = $id;
             // $opt['url'] = PrestaShopWS::GET_SHOP_URL().'api/orders/'.$id.'?ws_key='.PrestaShopWS::GET_API_KEY();
-            // $opt['url'] = PrestaShopWS::GET_SHOP_URL().'api/orders/'.$id;
             $xml = PrestaShopWS::Connect()->get($opt);
             $pedido = $xml->children()->children();
 
-            // $arrContextOptions = array(
-            //     "https" => array(
-            //           "header" => "Authorization: Basic ".$authorizationKey
-            //       ),
-            //   );
-            // $pedido = file_get_contents($url, false, stream_context_create($arrContextOptions));
-            // print_r($pedido);
             $direccion_envio = $this->obtenerDireccionDeEnvio($pedido->id_address_delivery);
             $direccion_factu = $this->obtenerDireccionDeEnvio($pedido->id_address_invoice);
 
